@@ -30,73 +30,6 @@
 			</div>
 		</div>
 		<script type="text/javascript" src="scripts/jquery.js"></script>
-		<!-- <script>
-			var obj=[
-		        {
-		            id : "001",
-		            name : "apple",
-		            category : "fruit",
-		            color : "images/pictures/5s.jpg"
-		        },
-		        {
-		            id : "002",
-		            name : "melon",
-		            category : "fruit",
-		            color : "images/pictures/7s.jpg"
-		        },
-		        {
-		            id : "003",
-		            name : "banana",
-		            category : "fruit",
-		            color : "images/pictures/3s.jpg"
-		        }
-		    ]
-		    // var tbl=$("<table/>").attr("id","mytable");
-		    // $("#div1").append(tbl);
-		    for(var i=0;i<3;i++)
-		    {
-		        var tr1="<div class='news-list-item'>";
-		        var tr="<a href='#'>";
-				var td1="<img src='"+obj[i]["color"]+"'>";
-				var td2="<strong>"+obj[i]["name"]+"</strong>";
-				var td3="</a>";
-				var td4="<span><i class='fas fa-clock'></i>30 Dec 2019 <a href='#' class='color-highlight'>Technology</a></span>";
-				var td5="</div>"
-
-		       $("#mydiv").append(tr1+tr+td1+td2+td3+td4+td5); 
-
-		    } 
-		</script> -->
-
-
-
-		<!-- <script>
-			var xmlhttp = new XMLHttpRequest();
-			var url = "text.txt";
-
-			xmlhttp.onreadystatechange = function() {
-			  if (this.readyState == 4 && this.status == 200) {
-			    var myArr = JSON.parse(this.responseText);
-			    myFunction(myArr);
-			  }
-			};
-			
-			xmlhttp.open("GET", url, true);
-			xmlhttp.send();
-
-			function myFunction(arr) {
-			  var out = "";
-			  var i;
-			  var we = [];
-			  for(i = 0; i < arr.length; i++) {
-			    out += '<a href="' + arr[i].teitle + '">' + 
-    			arr[i].we[0].qe + '</a><br>';
-			  }
-			  document.getElementById("id01").innerHTML = out;
-			}
-		</script> -->
-
-
 		<script type="text/javascript">
        		const request = new XMLHttpRequest();
      
@@ -105,34 +38,28 @@
 		     
 		    request.onload = () => {
 		      if (request.status === 200) {
-		        console.log("Success"); // So extract data from json and create table
-		        
-		        //Extracting data
+		        console.log("Success");
+
+		        //deklarasi data
 		        var _this = this;
 		        this.test = [];
 		        var grid = [];
 		        var data = [];
 		        var res = JSON.parse(request.response);
 		        for(var i=0;i<res.data.length;i++){
-			        
-			        // var cover = res.data[i].cover;
-		         //  	var newchar = '_300x200.';
-		         //  	_this.test = cover.split(/.([^.]*)$/).join(newchar);
-		         	var cover = res.data[i].cover;
-		          	var newchar = '_300x200.';
-		          	_this.test = cover.split(/.([^.]*)$/).join(newchar);
-		          	
-		          	// _this.test = cover.replace(/.([^.]*)$/.join(newchar);
-		          	console.log(_this.test);
 
-		          	// /.([^.]*)$/
+		        	// buat kecilin resolusi cover
+		         	var my = res.data[i].cover, replacement = '_160x160.';
+        			var str = my.replace(/.([^.]*)$/,replacement+'$1');
+        			res.data[i].coverlite =  str;
 
+        			var cover = res.data[i].coverlite;
 		        	var date = res.data[i].published;
 		        	var id = res.data[i].id;
 		        	var title = res.data[i].title;
 
 
-			        // Creating table
+			        // buat UI yang di tampilin ke html
 			        var table="<div class='news-list-item'>";
 			      	table+="<a href='#'>"; 
 			      	table+="<img src='"+cover+"'>";
@@ -141,7 +68,7 @@
 			      	table+="<span><i class='fas fa-clock'></i>" + date + "<a href='#' class='color-highlight'>Technology</a></span>";
 			      	table+="</div>";
 
-				    //Showing the table inside table
+				    //panggil ke <div id="mydiv">
 				    $("#mydiv").append(table); 
 			    }
 			    
