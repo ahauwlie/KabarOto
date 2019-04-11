@@ -108,19 +108,25 @@
 		        console.log("Success"); // So extract data from json and create table
 		        
 		        //Extracting data
+		        var _this = this;
+		        this.test = [];
 		        var grid = [];
 		        var data = [];
 		        var res = JSON.parse(request.response);
-
-
-		        var cover = res.data[0].cover;
-		        var date = res.data[0].published;
-		        var id = res.data[0].id;
-		        var title = res.data[0].title;
-
 		        for(var i=0;i<res.data.length;i++){
 			        
-			        var cover = res.data[i].cover;
+			        // var cover = res.data[i].cover;
+		         //  	var newchar = '_300x200.';
+		         //  	_this.test = cover.split(/.([^.]*)$/).join(newchar);
+		         	var cover = res.data[i].cover;
+		          	var newchar = '_300x200.';
+		          	_this.test = cover.split(/.([^.]*)$/).join(newchar);
+		          	
+		          	// _this.test = cover.replace(/.([^.]*)$/.join(newchar);
+		          	console.log(_this.test);
+
+		          	// /.([^.]*)$/
+
 		        	var date = res.data[i].published;
 		        	var id = res.data[i].id;
 		        	var title = res.data[i].title;
@@ -137,7 +143,6 @@
 
 				    //Showing the table inside table
 				    $("#mydiv").append(table); 
-				    console.log(table);      
 			    }
 			    
 		      } 
