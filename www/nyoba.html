@@ -13,6 +13,24 @@
     	<div id="page-transitions" class="page-build highlight-red">
 			
 			<div class="page-content header-clear">
+				<a data-menu="menu-3" href="#" class="demo-settings demo-settings-fixed bg-highlight top-15">Settings</a>
+				<div class="coverpage">
+					<!-- <div class="cover-slider owl-carousel owl-no-dots">
+						<div class="cover-item" style="background-image:url(images/pictures_vertical/bg0.jpg);">
+							<div class="cover-content cover-content-bottom">
+								<span class="cover-tag bg-highlight">NUTRITION</span>
+								<span class="cover-small-text opacity-40">December 15th, 2019</span>
+								<h1 class="color-white left-text uppercase bold top-30 bottom-0">Awesome Sauce</h1>
+								<p class="color-white font-11 bottom-30">Spices & Happiness in <a href="#" class="color-highlight">Latest Dishes</a></p>
+								<p class="color-white left-text opacity-40 bottom-0">UltraMobile is filled with Awesome Sauce, making it faster, more flexible and powerful than ever.</p>
+								<a href="#" class="top-15 bottom-15 font-12 color-gray-light float-left opacity-30">by Enabled</a>
+								<a href="#" class="top-15 bottom-15 font-12 color-highlight float-right">Read More<i class="fa fa-angle-right icon-clear-left"></i></a>
+							</div>
+							<div class="cover-overlay overlay overlay-gradient"></div>
+						</div>
+					</div> -->
+					<div id="mydiv"></div>
+				</div>
 				<div class="news-home">
 					<div class="news-tabs bg-white">
 						<a href="#" data-tab="news-tab-1" class="one-third center-text active-tab-button">Lists</a>
@@ -21,7 +39,7 @@
 					<div class="news-tabs-content">
 						<div class="tab-item active-tab" id="news-tab-1">
 							<div class="content">
-								<div id="mydiv"></div>
+								<!-- <div id="mydiv"></div> -->
 							</div>
 						</div>
 					</div>
@@ -46,31 +64,41 @@
 		        var grid = [];
 		        var data = [];
 		        var res = JSON.parse(request.response);
-		        for(var i=0;i<res.data.length;i++){
+		        // for(var i=0;i<res.data.length;i++){
 
 		        	// buat kecilin resolusi cover
-		         	var my = res.data[i].cover, replacement = '_160x160.';
+		         	var my = res.data[1].cover, replacement = '_360x685.';
         			var str = my.replace(/.([^.]*)$/,replacement+'$1');
-        			res.data[i].coverlite =  str;
+        			res.data[1].coverlite =  str;
 
-        			var cover = res.data[i].coverlite;
-		        	var date = res.data[i].published;
-		        	var id = res.data[i].id;
-		        	var title = res.data[i].title;
+        			var cover = res.data[1].coverlite;
+		        	var date = res.data[1].published;
+		        	var id = res.data[1].id;
+		        	var title = res.data[1].title;
+		        	var category = res.data[1].category[0].name;
+		        	var desc = res.data[1].seo_description;
+		        	var user = res.data[1].user.fullname;
 
 
 			        // buat UI yang di tampilin ke html
-			        var table="<div class='news-list-item'>";
-			      	table+="<a href='#'>"; 
-			      	table+="<img src='"+cover+"'>";
-			      	table+="<strong>"+title+"</strong>";
-			      	table+="</a>";
-			      	table+="<span><i class='fas fa-clock'></i>" + date + "<a href='#' class='color-highlight'>Technology</a></span>";
+			        var table="<div class='cover-slider owl-carousel owl-no-dots'>";
+			        table+="<div class='cover-item' style='background-image:url("+cover+");'>";
+			      	table+="<div class='cover-content cover-content-bottom'>"; 
+			      	table+="<span class='cover-tag bg-highlight'>"+category+"</span>";
+			      	table+="<span class='cover-small-text opacity-40'>"+date+"</span>";
+			      	table+="<h1 class='color-white left-text uppercase bold top-30 bottom-0'>"+title+"</h1>";
+			      	table+="<p class='color-white font-11 bottom-30'>Spices & Happiness in <a href='#' class='color-highlight'>Latest Dishes</a></p>";
+			      	table+="<p class='color-white left-text opacity-40 bottom-0'>"+desc+"</p>";
+			      	table+="<a href='#' class='top-15 bottom-15 font-12 color-gray-light float-left opacity-30'>by "+user+"</a>";
+			      	table+="<a href='#' class='top-15 bottom-15 font-12 color-highlight float-right'>Read More<i class='fa fa-angle-right icon-clear-left'></i></a>";
+			      	table+="</div>";
+			      	table+="<div class='cover-overlay overlay overlay-gradient'></div>";
+			      	table+="</div>";
 			      	table+="</div>";
 
 				    //panggil ke <div id="mydiv">
 				    $("#mydiv").append(table); 
-			    }
+			    // }
 			    
 		      } 
 		    };
