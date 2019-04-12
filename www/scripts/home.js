@@ -48,37 +48,6 @@ table+="</div>";
 //panggil ke <div id="mydiv">
 	$("#mydiv").append(table); 
 
-// // ui column kiri
-// if(i%2==0 || i==0){
-// 	// buat UI yang di tampilin ke html
-// 	var table="<div class='news-col-item'>";
-// 		table+="<a href='#'>"; 
-// 		table+="<img src='"+cover+"' class='responsive-image'>";
-// 		table+="<em class='bg-highlight'>"+id+"</em>";
-// 		table+="<strong>"+title+"</strong>";
-// 		table+="</a>";
-// 		table+="<span><i class='fas fa-clock'></i>" + date + "</span>";
-// 		table+="</div>";
-
-// 	//panggil ke <div id="mydiv">
-// 		$("#mydivcolL").append(table); 
-// }else{
-// 	// buat UI yang di tampilin ke html
-// 	var table="<div class='news-col-item'>";
-// 		table+="<a href='#'>"; 
-// 		table+="<img src='"+cover+"' class='responsive-image'>";
-// 		table+="<em class='bg-highlight'>"+id+"</em>";
-// 		table+="<strong>"+title+"</strong>";
-// 		table+="</a>";
-// 		table+="<span><i class='fas fa-clock'></i>" + date + "</span>";
-// 		table+="</div>";
-
-// 	//panggil ke <div id="mydiv">
-// 		$("#mydivcolR").append(table);
-// }
-
-
-
 var table="<div class='article-card  box-shadow bg-white bottom-30'>"
 	table+="<a href='#' class='article-header'>";
 	table+="<span class='article-overlay'></span>"; 
