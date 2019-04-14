@@ -30,7 +30,7 @@ request.onload = () => {
 			var covercard = res.data[i].coverlite1;
 			var date = res.data[i].published;
 			var title = res.data[i].title;
-			var user = res.data[i].user.fullname;
+			var user = res.data[i].user.name;
 			var minides = res.data[i].seo_description;
 
 			// buat UI yang di tampilin ke html
