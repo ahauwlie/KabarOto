@@ -41,7 +41,7 @@ request.onload = () => {
 					<a href="#">
 						<img src="` + cover + `">
 						<strong>` + title + `</strong>
-					</a>";
+					</a>
 					<span><i class="fas fa-clock"></i>` + date + `<a href="#" class="color-highlight">` + category + `</a></span>
 				</div>
 			`;
@@ -61,50 +61,13 @@ request.onload = () => {
 					<div class="article-content">
 						<h1 class="article-title top-15 bottom-15">` + title + `</h1>
 						<p class="bottom-15">` + minides + `</p>
-					</div>";
+					</div>
 				</div>
 			`;
 
 			//panggil ke <div id="mydiv">
 			$("#mydivcard").append(table2);
 		}
-
-		for (var i = 0; i < 2; i++) {
-
-			var my2 = res.data[i].cover,
-			replacement = '_360x240.';
-			var str2 = my2.replace(/.([^.]*)$/, replacement + '$1');
-			res.data[i].coverlite2 = str2;
-
-			var coverc = res.data[i].coverlite2;
-			var category = res.data[i].category[0].name;
-			var title = res.data[i].title;
-
-
-			// buat UI yang di tampilin ke html
-			var table3 = `
-				<a href="#" class="news-slide-1">
-					<img src="`+coverc+`" data-src-retina="`+coverc+`" alt="">
-					<strong class="font-16">`+title+`</strong>
-					<em class="bg-highlight">`+category+`</em>
-					<i class="fa fa-angle-right"></i>
-					<span class="overlay overlay-gradient"></span>
-				</a>
-			`;
-
-			//panggil ke <div id="mydiv">
-			$('.owl-carousel').append(table3);
-
-	        $('.single-slidera').owlCarousel({
-				loop: true,
-				nav: false,
-				lazyLoad: true,
-				items: 1,
-				autoplay: true,
-				autoplayTimeout: 3500
-			});
-		}
-
 	}
 };
 
