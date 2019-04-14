@@ -131,34 +131,7 @@
 
 			
 			<div class="page-content header-clear">
-				<div class="coverpage">
-					<div class="cover-slider owl-carousel owl-no-dots">
-						<div class="cover-item" style="background-image:url(images/pictures_vertical/bg0.jpg);">
-							<div class="cover-content cover-content-bottom">
-								<span class="cover-tag bg-highlight">NUTRITION</span>
-								<span class="cover-small-text opacity-40">December 15th, 2019</span>
-								<h1 class="color-white left-text uppercase bold top-30 bottom-0">Awesome Sauce</h1>
-								<p class="color-white font-11 bottom-30">Spices & Happiness in <a href="#" class="color-highlight">Latest Dishes</a></p>
-								<p class="color-white left-text opacity-40 bottom-0">UltraMobile is filled with Awesome Sauce, making it faster, more flexible and powerful than ever.</p>
-								<a href="#" class="top-15 bottom-15 font-12 color-gray-light float-left opacity-30">by Enabled</a>
-								<a href="#" class="top-15 bottom-15 font-12 color-highlight float-right">Read More<i class="fa fa-angle-right icon-clear-left"></i></a>
-							</div>
-							<div class="cover-overlay overlay overlay-gradient"></div>
-						</div>
-						<div class="cover-item" style="background-image:url(images/pictures_vertical/bg1.jpg);">
-							<div class="cover-content cover-content-bottom">
-								<span class="cover-tag bg-highlight">TRAVEL</span>
-								<span class="cover-small-text opacity-40">December 15th, 2019</span>
-								<h1 class="color-white left-text uppercase bold top-30 bottom-0">The Big apple</h1>
-								<p class="color-white font-11 bottom-30">New York in <a href="#" class="color-highlight">City News</a></p>
-								<p class="color-white left-text opacity-40 bottom-0">Apple plans to purchase Empire State building, New York to literally become the "Big Apple"</p>
-								<a href="#" class="top-15 bottom-15 font-12 color-gray-light float-left opacity-30">by Enabled</a>
-								<a href="#" class="top-15 bottom-15 font-12 color-highlight float-right">Read More<i class="fa fa-angle-right icon-clear-left"></i></a>
-							</div>
-							<div class="cover-overlay overlay overlay-gradient"></div>
-						</div>
-					</div>
-				</div>
+				<div id="demo"></div>
 				<div class="news-home">
 					<div class="news-tabs bg-white">
 						<!-- <a href="#" data-tab="news-tab-2" class="one-third center-text">Columns</a> -->
@@ -218,6 +191,38 @@
 		<script type="text/javascript" src="scripts/plugins.js"></script>
 		<script type="text/javascript" src="scripts/custom.js"></script>
 		<script type="text/javascript" src="scripts/home.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
+        <script>
+		    $.getJSON('https://adm982.kabaroto.com/api/post/?page=1&rpp=20', function(data) {
+		        	
+		        $('#demo').html('<div class="single-slidera owl-carousel owl-no-dots" id="test"></div>');
+	            for(var i=0;i<5;i++){
+	            	var my2 = data.data[i].cover, replacement = '_360x240.';
+					var str2 = my2.replace(/.([^.]*)$/, replacement + '$1');
+					data.data[i].coverlite2 = str2;
+
+					var coverc = data.data[i].coverlite2;
+					var category = data.data[i].category[0].name;
+					var title = data.data[i].title;
+	            	var boom =`
+						<a href="#" class="news-slide-1">
+							<img src="`+coverc+`" data-src-retina="`+coverc+`" alt="">
+							<strong class="font-16">`+title+`</strong>
+							<em class="bg-highlight">`+category+`</em>
+							<i class="fa fa-angle-right"></i>
+							<span class="overlay overlay-gradient"></span>
+						</a>
+	            	`;
+	                $(".owl-carousel").append(boom);
+	            };
+	            $('.single-slidera').owlCarousel({
+					loop: true,
+					nav: false,
+					lazyLoad: true,
+					items: 1,
+					autoplay: true,
+					autoplayTimeout: 3500
+				});
+		    });
+	    </script>
     </body>
 </html>
