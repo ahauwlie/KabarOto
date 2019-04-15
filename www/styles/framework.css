@@ -7207,7 +7207,7 @@ input[type=range]::-webkit-slider-thumb:after {
 	bottom: -30px!important
 }
 
-.cover-slider .owl-dots,
+.cover-slider .cover-slidera .owl-dots,
 .cover-walkthrough-slider .owl-dots {
 	margin-top: -30px;
 	height: 30px
@@ -7299,7 +7299,7 @@ input[type=range]::-webkit-slider-thumb:after {
 	margin: 0 auto 30px
 }
 
-.cover-slider .overlay-gradient {
+.cover-slider .cover-slidera .overlay-gradient {
 	background: linear-gradient(to bottom, rgba(0, 0, 0, .1) 10%, rgba(0, 0, 0, .2) 20%, rgba(0, 0, 0, .7) 50%, rgba(0, 0, 0, .9) 70%, rgba(0, 0, 0, 1) 100%)
 }
 
