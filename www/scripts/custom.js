@@ -1,5 +1,3 @@
-
-
 $(window).on('load', function () {
 	$('#page-build').remove();
 	setTimeout(function () {
@@ -814,6 +812,10 @@ $(document).ready(function () {
 			loadJS('scripts/charts.js', call_charts_to_page, document.body);
 		}
 
+
+
+
+
 		function createCookie(e, t, n) {
 			if (n) {
 				var o = new Date;
@@ -895,6 +897,8 @@ $(document).ready(function () {
 				$(this).parent().parent().find('[data-filter-item]').removeClass('disabled-search');
 			}
 		});
+
+		
 		$('.active-tab').slideDown(0);
 		$('a[data-tab]').on("click", function () {
 			var tab_number = $(this).data('tab');
@@ -1080,41 +1084,41 @@ $(document).ready(function () {
 		$('.shareToMail').prop("href", "mailto:?body=" + share_link)
 	}
 	setTimeout(init_template, 0);
-	$(function () {
-		'use strict';
-		var options = {
-			prefetch: true,
-			prefetchOn: 'mouseover',
-			cacheLength: 100,
-			scroll: true,
-			blacklist: '.default-link' && '.show-gallery',
-			forms: 'contactForm',
-			onStart: {
-				duration: 350,
-				render: function ($container) {
-					$container.addClass('is-exiting');
-					$('.page-change-preloader').addClass('show-change-preloader');
-					return false;
-				}
-			},
-			onReady: {
-				duration: 50,
-				render: function ($container, $newContent) {
-					$container.removeClass('is-exiting');
-					$container.html($newContent);
-					$('#page-build').remove();
-					$('.page-change-preloader').addClass('show-change-preloader');
-				}
-			},
-			onAfter: function ($container, $newContent) {
-				setTimeout(init_template, 0)
-				setTimeout(function () {
-					$('.page-change-preloader').removeClass('show-change-preloader');
-				}, 150);
-			}
-		};
-		var smoothState = $('#page-transitions').smoothState(options).data('smoothState');
-	});
+	// $(function () {
+	// 	'use strict';
+	// 	var options = {
+	// 		prefetch: true,
+	// 		prefetchOn: 'mouseover',
+	// 		cacheLength: 100,
+	// 		scroll: true,
+	// 		blacklist: '.default-link' && '.show-gallery',
+	// 		forms: 'contactForm',
+	// 		onStart: {
+	// 			duration: 350,
+	// 			render: function ($container) {
+	// 				$container.addClass('is-exiting');
+	// 				$('.page-change-preloader').addClass('show-change-preloader');
+	// 				return false;
+	// 			}
+	// 		},
+	// 		onReady: {
+	// 			duration: 50,
+	// 			render: function ($container, $newContent) {
+	// 				$container.removeClass('is-exiting');
+	// 				$container.html($newContent);
+	// 				$('#page-build').remove();
+	// 				$('.page-change-preloader').addClass('show-change-preloader');
+	// 			}
+	// 		},
+	// 		onAfter: function ($container, $newContent) {
+	// 			setTimeout(init_template, 0)
+	// 			setTimeout(function () {
+	// 				$('.page-change-preloader').removeClass('show-change-preloader');
+	// 			}, 150);
+	// 		}
+	// 	};
+	// 	var smoothState = $('#page-transitions').smoothState(options).data('smoothState');
+	// });
 	$('body').append('<div class="page-change-preloader preloader-light"><div id="preload-spinner" class="spinner-red"></div></div>');
 });
 
