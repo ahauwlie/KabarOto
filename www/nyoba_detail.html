@@ -150,25 +150,26 @@
 
                 </div>
                 <div class="content reading-time-box">
-                    <h4 class="color-gray-dark font-12 bottom-30">By <a href="#">Enabled</a> - <span class="reading-time color-green-dark"></span> Minutes - <span class="reading-words color-green-dark"></span> Words.</h4>
-                    <div class="clear"></div>
-                    <a href="#" class="back-button button button-s button-full button-rounded bottom-15 bg-highlight ultrabold uppercase">Back to Blog</a>
+                    <a href="#" data-menu="menu-share"><i class="instagram-bg fas fa-share-alt"></i> Share This Articel</a>
                 </div>
                 <div class="decoration decoration-margins"></div>
                 <div class="footer footer-dark">
                     <a href="#" class="footer-logo"></a>
-                    <strong>Built with <i class="fas fa-heart color-red-light"></i> by Elites</strong>
+                    <strong>Kabar Seputar Otomotif</strong>
                     <p class="footer-text">
-                        Simplicity and power packed into a beautiful, feature filled, fast, mobile template.
+                        Paramount Hill Golf Blok GGT No. 112
+                        Paramount Serpong, Pagedangan,
+                        Kab. Tangerang, 15332
+                        Banten Indonesia
                     </p>
                     <div class="footer-socials">
                         <a href="#"><i class="facebook-bg fab fa-facebook-f"></i></a>
                         <a href="#"><i class="twitter-bg fab fa-twitter"></i></a>
                         <a href="#"><i class="google-bg fab fa-google-plus-g"></i></a>
-                        <a href="#" data-menu="menu-share"><i class="instagram-bg fas fa-share-alt"></i></a>
+                        <a href="#"><i class="instagram-bg fab fa-youtube"></i></a>
                         <a href="#" class="back-to-top"><i class="bg-green-dark fas fa-angle-up"></i></a>
                     </div>
-                    <p class="footer-copyright">&copy; Enabled <span class="copyright-year"></span>. All rights reserved.</p>
+                    <p class="footer-copyright">KabarOto &copy;<span class="copyright-year"></span>. Develop by <a href="https://www.instagram.com/ahauwlie/?hl=de">@ahauwlie</a>.</p>
                 </div>
             </div>
             <a href="#" class="back-to-top-badge back-to-top-small bg-highlight"><i class="fa fa-angle-up"></i>Back to Top</a>
@@ -190,19 +191,17 @@
                     console.log(cover)
                     var title = data.data.title;
                     var user = data.data.user.name;
-                    var cover = data.data.cover_label;
                     var date = data.data.published;
                     var my = data.data.content;
                     var newchar = 'https://adm982.kabaroto.com/';
                     var newchar2 = '<img style="width: 100%; height: auto;"';
                     var content = my.split('../../').join(newchar);
                     var content2 = content.split('<img').join(newchar2);
-                    console.log(content2)
                     var category = data.data.category[0].name;
 
                     var table1 = `
                         <img src="`+cover+`" class="preload-image responsive-image">
-                        <strong class="font-17">`+title+`</strong>
+                        <strong class="font-24">`+title+`</strong>
                         <span>In:<a href="#" class="color-highlight">`+category+`</a></span>
                         <div class="blog-post-stats">
                             <a href="#"><i class="fa fa-heart color-red-light"></i>503</a>
@@ -216,6 +215,14 @@
                     `;
 
                     $(".blog-post-home").append(table1);
+
+                    var table2 = `
+                        <h4 class="color-gray-dark font-12 bottom-30">By <a href="#">`+user+`</a> - <i class="fas fa-clock"></i> ` + date + `</h4>
+                        <div class="clear"></div>
+                        <a href="home.html" class="back-button button button-s button-full button-rounded bottom-15 bg-highlight ultrabold uppercase">Back to Home</a>
+                    `;
+
+                    $(".reading-time-box").append(table2);
                 });
         </script>
     </body>
