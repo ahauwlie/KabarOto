@@ -200,7 +200,7 @@
 
                 var table1 = `
                     <div class="news-list-item no-border bottom-0">
-                        <a href="#">
+                        <a href="nyoba_detail.html?id=`+category+`">
                             <img src="` + cover + `">
                             <strong>` + title + `</strong>
                         </a>
@@ -212,7 +212,7 @@
 
                 var table2 = `
                     <div class="article-card  box-shadow bg-white bottom-30">
-                        <a href="#" class="article-header">
+                        <a href="nyoba_detail.html?id=`+category+`" class="article-header">
                             <span class="article-overlay"></span>
                             <img class="article-image preload-image" src="` + covercard + `">
                             <span class="article-category bg-highlight color-white uppercase">` + category + `</span>
@@ -243,7 +243,7 @@
                 var category = data.data[i].id;
                 var title = data.data[i].title;
                 var boom =`
-                    <a href="#" class="news-slide-1">
+                    <a href="nyoba_detail.html?id=`+category+`" class="news-slide-1">
                         <img src="`+coverc+`" data-src-retina="`+coverc+`" alt="">
                         <strong class="font-16">`+title+`</strong>
                         <em class="bg-highlight">`+category+`</em>
@@ -295,7 +295,7 @@
                     // buat UI yang di tampilin ke html
                     var table1 = `
                         <div class="news-list-item no-border bottom-0">
-                            <a href="#">
+                            <a href="nyoba_detail.html?id=`+category+`">
                                 <img src="` + cover + `">
                                 <strong>` + title + `</strong>
                             </a>
@@ -308,7 +308,7 @@
 
                     var table2 = `
                         <div class="article-card  box-shadow bg-white bottom-30">
-                            <a href="#" class="article-header">
+                            <a href="nyoba_detail.html?id=`+category+`" class="article-header">
                                 <span class="article-overlay"></span>
                                 <img class="article-image preload-image" src="` + covercard + `">
                                 <span class="article-category bg-highlight color-white uppercase">` + category + `</span>
