@@ -131,7 +131,9 @@
 
         
         <div class="page-content header-clear">
-            <div class="blog-post-home header-dark" style="margin: auto;width: 100%;border: 3px solid #fff;padding: 10px;"></div>
+            <div class="blog-post-home header-dark" style="margin: auto;width: 100%;border: 3px solid #fff;padding: 10px;">
+                <div id="demo"></div>
+            </div>
             <div class="news-home">
                 <div class="news-tabs bg-white">
                     <a href="#" data-tab="news-tab-1" class="one-half center-text active-tab-button">Lists</a>
@@ -181,7 +183,7 @@
         var url = window.location.href;
         var id = url.substring(url.lastIndexOf('=') + 1);
         $.getJSON('https://adm982.kabaroto.com/api/post?page=1&rpp=20&user=' + id, function(data) {
-                
+
             for (var i = 0; i < data.data.length; i++) {
                 var my = data.data[i].cover,
                 replacement = '_160x160.';
@@ -199,36 +201,38 @@
                 var title = data.data[i].title;
                 var user = data.data[i].user.name;
                 var minides = data.data[i].seo_description;
-
-                var table1 = `
-                    <div class="news-list-item no-border bottom-0">
-                        <a href="#">
-                            <img src="` + cover + `">
-                            <strong>` + title + `</strong>
-                        </a>
-                        <span><i class="fas fa-clock"></i>` + date + `<a href="#" class="color-highlight">` + user + `</a></span>
-                    </div>
-                `;
-
-                $("#mydiv").append(table1);
-
-                var table2 = `
-                    <div class="article-card  box-shadow bg-white bottom-30">
-                        <a href="#" class="article-header">
-                            <span class="article-overlay"></span>
-                            <img class="article-image preload-image" src="` + covercard + `">
-                            <span class="article-category bg-highlight color-white uppercase">` + category + `</span>
-                            <span class="article-author color-gray-light"><i class="fa fa-user opacity-50"></i>`+user+`</span>
-                            <span class="article-time color-gray-light">` + date + `<i class="fas fa-clock opacity-50"></i></span>
-                        </a>
-                        <div class="article-content">
-                            <h1 class="article-title top-15 bottom-15">` + title + `</h1>
-                            <p class="bottom-15">` + minides + `</p>
+                var userid = data.data[i].user.id;
+                if(userid == id){
+                    var table1 = `
+                        <div class="news-list-item no-border bottom-0">
+                            <a href="#">
+                                <img src="` + cover + `">
+                                <strong>` + title + `</strong>
+                            </a>
+                            <span><i class="fas fa-clock"></i>` + date + `<a href="#" class="color-highlight">` + user + `</a></span>
                         </div>
-                    </div>
-                `;
+                    `;
 
-                $("#mydivcard").append(table2);
+                    $("#mydiv").append(table1);
+
+                    var table2 = `
+                        <div class="article-card  box-shadow bg-white bottom-30">
+                            <a href="#" class="article-header">
+                                <span class="article-overlay"></span>
+                                <img class="article-image preload-image" src="` + covercard + `">
+                                <span class="article-category bg-highlight color-white uppercase">` + category + `</span>
+                                <span class="article-author color-gray-light"><i class="fa fa-user opacity-50"></i>`+user+`</span>
+                                <span class="article-time color-gray-light">` + date + `<i class="fas fa-clock opacity-50"></i></span>
+                            </a>
+                            <div class="article-content">
+                                <h1 class="article-title top-15 bottom-15">` + title + `</h1>
+                                <p class="bottom-15">` + minides + `</p>
+                            </div>
+                        </div>
+                    `;
+
+                    $("#mydivcard").append(table2);
+                }
             }
         });
     </script>
@@ -241,7 +245,6 @@
         });
         function appendData() {
             page++;
-            console.log(page);
             var url = window.location.href;
             var id = url.substring(url.lastIndexOf('=') + 1);
             $.getJSON('https://adm982.kabaroto.com/api/post?user='+id+'&rpp=20&page=' + page, function(data) {
@@ -262,39 +265,42 @@
                     var title = data.data[i].title;
                     var user = data.data[i].user.name;
                     var minides = data.data[i].seo_description;
+                    var userid = data.data[i].user.id;
 
                     // buat UI yang di tampilin ke html
-                    var table1 = `
-                        <div class="news-list-item no-border bottom-0">
-                            <a href="#">
-                                <img src="` + cover + `">
-                                <strong>` + title + `</strong>
-                            </a>
-                            <span><i class="fas fa-clock"></i>` + date + `<a href="#" class="color-highlight">` + user + `</a></span>
-                        </div>
-                    `;
-
-                    //panggil ke <div id="mydiv">
-                    $("#mydiv").append(table1);
-
-                    var table2 = `
-                        <div class="article-card  box-shadow bg-white bottom-30">
-                            <a href="#" class="article-header">
-                                <span class="article-overlay"></span>
-                                <img class="article-image preload-image" src="` + covercard + `">
-                                <span class="article-category bg-highlight color-white uppercase">` + category + `</span>
-                                <span class="article-author color-gray-light"><i class="fa fa-user opacity-50"></i>`+user+`</span>
-                                <span class="article-time color-gray-light">` + date + `<i class="fas fa-clock opacity-50"></i></span>
-                            </a>
-                            <div class="article-content">
-                                <h1 class="article-title top-15 bottom-15">` + title + `</h1>
-                                <p class="bottom-15">` + minides + `</p>
+                    if(userid == id){
+                        var table1 = `
+                            <div class="news-list-item no-border bottom-0">
+                                <a href="#">
+                                    <img src="` + cover + `">
+                                    <strong>` + title + `</strong>
+                                </a>
+                                <span><i class="fas fa-clock"></i>` + date + `<a href="#" class="color-highlight">` + user + `</a></span>
                             </div>
-                        </div>
-                    `;
+                        `;
 
-                    //panggil ke <div id="mydiv">
-                    $("#mydivcard").append(table2);
+                        //panggil ke <div id="mydiv">
+                        $("#mydiv").append(table1);
+
+                        var table2 = `
+                            <div class="article-card  box-shadow bg-white bottom-30">
+                                <a href="#" class="article-header">
+                                    <span class="article-overlay"></span>
+                                    <img class="article-image preload-image" src="` + covercard + `">
+                                    <span class="article-category bg-highlight color-white uppercase">` + category + `</span>
+                                    <span class="article-author color-gray-light"><i class="fa fa-user opacity-50"></i>`+user+`</span>
+                                    <span class="article-time color-gray-light">` + date + `<i class="fas fa-clock opacity-50"></i></span>
+                                </a>
+                                <div class="article-content">
+                                    <h1 class="article-title top-15 bottom-15">` + title + `</h1>
+                                    <p class="bottom-15">` + minides + `</p>
+                                </div>
+                            </div>
+                        `;
+
+                        //panggil ke <div id="mydiv">
+                        $("#mydivcard").append(table2);
+                    }
                 };
             });
         }
@@ -302,26 +308,35 @@
     <script type="text/javascript">
         var url = window.location.href;
         var id = url.substring(url.lastIndexOf('=') + 1);
-        console.log(id)
         $.getJSON('https://adm982.kabaroto.com/api/post?page=1&rpp=20&user=' + id, function(data) {
 
-                var cover = data.data[0].user.avatar;
-                var user = data.data[0].user.fullname;
-                var about = data.data[0].user.about;
+                for(var i=0;i<data.data.length;i++){
+                    var cover = data.data[i].user.avatar;
+                    var user = data.data[i].user.fullname;
+                    var userid = data.data[i].user.id;
+                    var about = data.data[i].user.about;
+                    var twitter = data.data[i].user.social_twitter;
+                    var facebook = data.data[i].user.social_facebook;
+                    var instagram = data.data[i].user.social_instagram;
 
-                var table1 = `
-                    <img src="`+cover+`" style="margin: auto;" width="100" class="bottom-15">
-                    <strong class="font-24 color-white">`+user+`</strong>
-                    <span class="color-white">About the author:<a href="#" class="color-highlight font-15"> `+about+`</a></span>
-                    <div class="blog-post-stats">
-                        <a href="#"><i class="fa fa-heart color-red-light"></i>503</a>
-                        <a href="#"><i class="fa fa-eye color-blue-light"></i>623</a>
-                        <a href="#"><i class="fa fa-comments color-brown-light"></i>135</a>
-                        <div class="clear"></div>
-                    </div>
-                `;
+                    if(userid == id){
+                        var table1 = `
+                            <img src="`+cover+`" style="margin: auto;" width="100" class="bottom-15">
+                            <strong class="font-24 color-white">`+user+`</strong>
+                            <span class="color-white">About the author:<a href="#" class="color-highlight font-15"> `+about+`</a></span>
+                            <div class="footer-socials" style="display: block;margin-left: auto;margin-right: auto;">
+                                <a href="`+facebook+`"><i class="facebook-bg fab fa-facebook-f"></i></a>
+                                <a href="`+twitter+`"><i class="twitter-bg fab fa-twitter"></i></a>
+                                <a href="`+instagram+`"><i class="google-bg fab fa-instagram"></i></a>
+                                <div class="clear"></div>
+                            </div>
+                        `;
 
-                $(".blog-post-home").append(table1);
+                        console.log(about)
+                        // $(".blog-post-home").append(table1);
+                        document.getElementById("demo").innerHTML = table1;
+                    }
+                }
             });
     </script>
 </body>

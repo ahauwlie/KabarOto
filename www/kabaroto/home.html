@@ -196,6 +196,7 @@
                 var date = data.data[i].published;
                 var title = data.data[i].title;
                 var user = data.data[i].user.name;
+                var userid = data.data[i].user.id;
                 var minides = data.data[i].seo_description;
 
                 var table1 = `
@@ -204,7 +205,7 @@
                             <img src="` + cover + `">
                             <strong>` + title + `</strong>
                         </a>
-                        <span><i class="fas fa-clock"></i>` + date + `<a href="#" class="color-highlight">` + user + `</a></span>
+                        <span><i class="fas fa-clock"></i>` + date + `<a href="userposts.html?id=`+userid+`" class="color-highlight">` + user + `</a></span>
                     </div>
                 `;
 
@@ -290,6 +291,7 @@
                     var date = data.data[i].published;
                     var title = data.data[i].title;
                     var user = data.data[i].user.name;
+                    var userid = data.data[i].user.id;
                     var minides = data.data[i].seo_description;
 
                     // buat UI yang di tampilin ke html
@@ -299,7 +301,7 @@
                                 <img src="` + cover + `">
                                 <strong>` + title + `</strong>
                             </a>
-                            <span><i class="fas fa-clock"></i>` + date + `<a href="#" class="color-highlight">` + user + `</a></span>
+                            <span><i class="fas fa-clock"></i>` + date + `<aa href="userposts.html?id=`+userid+`" class="color-highlight">` + user + `</a></span>
                         </div>
                     `;
 
