@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>KabarOto</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">
+        <link rel="stylesheet" type="text/css" href="styles/framework.css">
+    </head>
+<body>
+    <div id="page-transitions" class="page-build highlight-red">
+
+        <!-- header ini -->
+        <div class="header header-dark header-logo-center" style="transition: all 350ms ease 0s;">
+            <a href="home.html" class="header-logo"></a>
+            <a data-menu="menu-1" href="#" class="header-icon header-icon-1"><i class="fas fa-bars"></i></a>
+            <a data-menu="menu-3" href="#" class="header-icon header-icon-4"><i class="fas fa-cog"></i></a>
+        </div>
+        <!-- selesai header -->
+
+        
+        <div class="page-content header-clear">
+            <div class="news-home">
+                <div class="news-tabs bg-white">
+                    <a href="#" data-tab="news-tab-1" class="one-half center-text active-tab-button">Lists</a>
+                    <div class="clear"></div>
+                </div>
+                <div class="news-tabs-content">
+                    <div class="tab-item active-tab" id="news-tab-1">
+                        <div class="content">
+                            <div id="mydiv"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="back-to-top-badge back-to-top-small bg-highlight"><i class="fa fa-angle-up"></i>Back to Top</a>
+    </div>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/plugins.js"></script>
+    <script type="text/javascript" src="scripts/custom.js"></script>
+    <script type="text/javascript">
+        $.getJSON('https://adm982.kabaroto.com/api/post/?page=1&rpp=20', function(data) {
+                
+            for (var i = 0; i < data.data.length; i++) {
+                var my = data.data[i].cover,
+                replacement = '_160x160.';
+                var str = my.replace(/.([^.]*)$/, replacement + '$1');
+                data.data[i].coverlite = str;
+                var my1 = data.data[i].cover,
+                replacement = '_318x150.';
+                var str1 = my1.replace(/.([^.]*)$/, replacement + '$1');
+                data.data[i].coverlite1 = str1;
+
+                var category = data.data[i].id;
+                var cover = data.data[i].coverlite;
+                var covercard = data.data[i].coverlite1;
+                var date = data.data[i].published;
+                var title = data.data[i].title;
+                var user = data.data[i].user.name;
+                var minides = data.data[i].seo_description;
+
+                var table1 = `
+                    <div class="news-list-item no-border bottom-0">
+                        <a href="nyoba_detail.html?id=`+category+`">
+                            <img src="` + cover + `">
+                            <strong>` + title + `</strong>
+                        </a>
+                        <span><i class="fas fa-clock"></i>` + date + `<a href="#" class="color-highlight">` + user + `</a></span>
+                    </div>
+                `;
+
+                $("#mydiv").append(table1);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a0e3b882-dcc8-4f20-85d0-58d4132688c7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/browser.json" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/browser.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/home_nyoba.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/images/logo-darK1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/images/logo-dark-blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/images/logo-dark-blue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/images/logo-dark-blue1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/images/logo-dark-green.png" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/images/logo-dark-green.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/images/logo-dark-magenta.png" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/images/logo-dark-magenta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/images/logo-dark-orange.png" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/images/logo-dark-orange.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/images/logo-dark-pink.png" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/images/logo-dark-pink.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/images/logo-dark-red.png" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/images/logo-dark-red.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/images/logo-light-blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/images/logo-light-blue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/images/logo-light-blue1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/images/logo-light-green.png" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/images/logo-light-green.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/images/logo-light-magenta.png" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/images/logo-light-magenta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/images/logo-light-orange.png" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/images/logo-light-orange.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/images/logo-light-pink.png" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/images/logo-light-pink.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/nyoba_detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/kabaroto/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/modif_bengbil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/modif_bengtor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/modif_mobil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/modif_motor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/modif_restorasi.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/news_eksekutif.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/news_event.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/news_jip.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/news_konsep.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/news_mobil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/news_motor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/nyoba_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/kabaroto/nyoba_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/sport_f1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/sport_moto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/sport_nasional.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/tips_mobil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/tips_motor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/tren_aksesori.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/tren_kombil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/tren_komtor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/tren_pernik.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/kabaroto/userposts.html" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-2059074797">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="9" />
+    <option name="y" value="101" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="android" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="device.picker.selection" value="60636ab3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="android.studio.gradle" />
+    <property name="show.do.not.ask.upgrade.gradle.plugin" value="3.0.1" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a0e3b882-dcc8-4f20-85d0-58d4132688c7" name="Default Changelist" comment="" />
+      <created>1556262843759</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1556262843759</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.32980332" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Build Variants" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Run" />
+      <window_info anchor="bottom" id="Logcat" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Android Profiler" />
+      <window_info anchor="bottom" id="Debug" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Build" visible="true" weight="0.3295082" />
+      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Gradle" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Palette&#9;" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>
